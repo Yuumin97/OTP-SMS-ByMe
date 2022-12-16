@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SmsService {
-    private final String ACCOUNT_SID ="AC439cba1e09c7ff4c7a3a2db4c0794272";
-    private final String AUTH_TOKEN = "bdaab2708227fcaa976277cdf7ff2dc5";
-    private final String FROM_NUMBER = "+12055481719";
+    private final String ACCOUNT_SID ="ACe1044c5ea1f8765a412cc10801a2b8f5";
+    private final String AUTH_TOKEN = "735f18bff347e273998db8787d2baaaa";
+    private final String FROM_NUMBER = "+19295566333";
     public void send(SmsOTP sms){
         Twilio.init(ACCOUNT_SID,AUTH_TOKEN);
         int min = 100000;
