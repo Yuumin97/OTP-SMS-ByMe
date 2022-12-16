@@ -1,6 +1,6 @@
 package ducmin.otp.controller;
 
-import ducmin.otp.model.SmsPojo;
+import ducmin.otp.model.SmsOTP;
 import ducmin.otp.service.SmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,14 +20,14 @@ public class SMSController {
     private final String TOPIC_DESTINATION = "/lesson/sms";
 
     @PostMapping("/mobileNo")
-    public ResponseEntity<?> sendOtp(@RequestBody SmsPojo sms){
+    public ResponseEntity<?> sendOtp(@RequestBody SmsOTP sms){
         try {
             smsService.send(sms);
 
         }catch (Exception e){
             return new ResponseEntity<>("Vui lòng kiểm tra lại số điện thoại", HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        websocket.convertAndSend(TOPIC_DESTINATION,getTimeStamp()+": SMS has been sent!" + sms.getPhoneNumber());
+        websocket.convertAndSend(TOPIC_DESTINATION,getTimeStamp()+": SMS đã được gửi!" + sms.getPhoneNumber());
         return new ResponseEntity<>("Đã gửi mã OTP xin vui lòng nhập mã",HttpStatus.OK);
     }
     private String getTimeStamp(){

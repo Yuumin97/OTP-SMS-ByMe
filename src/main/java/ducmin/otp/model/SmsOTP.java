@@ -1,6 +1,6 @@
 package ducmin.otp.model;
 
-public class SmsPojo {
+public class SmsOTP {
     private String phoneNumber;
 
     public String getPhoneNumber() {
