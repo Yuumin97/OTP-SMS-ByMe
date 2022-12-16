@@ -1,17 +1,13 @@
 package ducmin.otp.controller;
 
-import ducmin.otp.dto.SmsPojo;
+import ducmin.otp.model.SmsPojo;
 import ducmin.otp.service.SmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
-import java.net.http.WebSocket;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 

@@ -1,4 +1,4 @@
-package ducmin.otp.dto;
+package ducmin.otp.model;
 
 public class StoreOTP {
     private static int otp;

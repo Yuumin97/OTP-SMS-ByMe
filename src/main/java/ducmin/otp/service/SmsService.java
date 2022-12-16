@@ -3,8 +3,8 @@ package ducmin.otp.service;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import ducmin.otp.dto.SmsPojo;
-import ducmin.otp.dto.StoreOTP;
+import ducmin.otp.model.SmsPojo;
+import ducmin.otp.model.StoreOTP;
 import org.springframework.stereotype.Component;
 
 import java.text.ParseException;

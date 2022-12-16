@@ -1,7 +1,7 @@
 package ducmin.otp.controller;
 
-import ducmin.otp.dto.StoreOTP;
-import ducmin.otp.dto.TempOTP;
+import ducmin.otp.model.StoreOTP;
+import ducmin.otp.model.TempOTP;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
